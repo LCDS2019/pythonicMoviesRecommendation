@@ -172,30 +172,20 @@
 
 <owl:Class rdf:about="#Titulo">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Titulo"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#tem_genero"/>
-          <owl:onClass rdf:resource="#Genero"/>
-          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
-  <owl:equivalentClass>
-    <owl:Class>
-      <owl:intersectionOf rdf:parseType="Collection">
-        <rdf:Description rdf:about="#Titulo"/>
-        <owl:Restriction>
-          <owl:onProperty rdf:resource="#tem_avaliacao"/>
-          <owl:onClass rdf:resource="#Avaliacao"/>
-          <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-        </owl:Restriction>
-      </owl:intersectionOf>
-    </owl:Class>
-  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#tem_genero"/>
+      <owl:onClass rdf:resource="#Genero"/>
+      <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#tem_avaliacao"/>
+      <owl:onClass rdf:resource="#Avaliacao"/>
+      <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
 </owl:Class>
 
 <owl:Class rdf:about="#Genero">
@@ -229,16 +219,6 @@
 <owl:Class rdf:about="#PapelPrincipal">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
 </owl:Class>
-
-<owl:AllDisjointClasses>
-  <owl:members rdf:parseType="Collection">
-    <rdf:Description rdf:about="#Titulo"/>
-    <rdf:Description rdf:about="#Pessoa"/>
-    <rdf:Description rdf:about="#Genero"/>
-    <rdf:Description rdf:about="#Avaliacao"/>
-    <rdf:Description rdf:about="#TituloAlternativo"/>
-  </owl:members>
-</owl:AllDisjointClasses>
 
 
 </rdf:RDF>

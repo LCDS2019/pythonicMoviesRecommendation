@@ -141,10 +141,8 @@ with onto:
         domain = [Titulo]
         range = [int]
 
-    AllDisjoint([Titulo, Pessoa, Genero, Avaliacao, TituloAlternativo])
-
-    Titulo.equivalent_to.append(Titulo & (tem_genero.min(1, Genero)))
-    Titulo.equivalent_to.append(Titulo & (tem_avaliacao.min(1, Avaliacao)))
+    Titulo.is_a.append(tem_genero.min(1, Genero))
+    Titulo.is_a.append(tem_avaliacao.min(1, Avaliacao))
 
     Avaliacao.equivalent_to.append(Avaliacao & (nota_media.exactly(1, float)))
 
