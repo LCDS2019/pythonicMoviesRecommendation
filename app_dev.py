@@ -21,9 +21,6 @@ onto = carregar_ontologia()
 
 # Configuração do Streamlit
 st.set_page_config(page_title="Cadastro de Usuário", layout="centered")
-
-st.markdown("# 🎬 Movie Recommendation App")
-
 st.title("\U0001F464 Cadastro de Usuário")
 
 # Cadastro ou atualização de usuário
@@ -75,10 +72,6 @@ usuario_instancia = next((onto.search_one(iri="*" + uid) for uid, nome in usuari
 
 modo_busca = st.radio("Modo de recomendação:", ["Com base no gênero preferido", "Todos os filmes"])
 
-# Filtro de nota mínima e máxima
-st.markdown("**Filtro por nota**")
-nota_min, nota_max = st.slider("Selecione o intervalo de nota", min_value=0.0, max_value=10.0, value=(0.0, 10.0), step=0.1)
-
 if st.button("Buscar filmes recomendados"):
     if usuario_instancia:
         filmes_filtrados = []
@@ -98,18 +91,16 @@ if st.button("Buscar filmes recomendados"):
                     obter_valor_propriedade(g.nome_genero)
                     for g in filme.tem_genero if hasattr(g, "nome_genero")
                 ))
-                nota_filme = float(filme.nota) if hasattr(filme, "nota") and filme.nota else 0.0
-
-                if (nota_min <= nota_filme <= nota_max) and (not generos_usuario or any(g in generos_usuario for g in generos_filme)):
+                if not generos_usuario or any(g in generos_usuario for g in generos_filme):
                     nome_filme = obter_valor_propriedade(filme.titulo) if hasattr(filme, "titulo") else filme.name
-                    ano_filme = int(filme.ano) if hasattr(filme, "ano") and filme.ano else "?"
-                    filmes_filtrados.append((nome_filme, ano_filme, generos_filme, nota_filme))
+                    nota_filme = float(filme.nota) if hasattr(filme, "nota") and filme.nota else 0.0
+                    filmes_filtrados.append((nome_filme, generos_filme, nota_filme))
 
         if filmes_filtrados:
-            filmes_ordenados = sorted(filmes_filtrados, key=lambda x: x[3], reverse=True)
+            filmes_ordenados = sorted(filmes_filtrados, key=lambda x: x[2], reverse=True)
             st.subheader("\U0001F3AC Filmes recomendados:")
-            for ano, nome, gs, nota in filmes_ordenados:
-                st.markdown(f"- **{ano}** — **{nome}** — *{', '.join(gs)}* — Nota: **{nota:.1f}**")
+            for nome, gs, nota in filmes_ordenados:
+                st.markdown(f"- **{nome}** — *{', '.join(gs)}* — Nota: **{nota:.1f}**")
         else:
             st.info("Nenhum filme encontrado para os critérios selecionados.")
     else:

@@ -14153,6 +14153,8 @@
 <owl:NamedIndividual rdf:about="#usuario_aline">
   <rdf:type rdf:resource="#Usuario"/>
   <tem_preferencia rdf:resource="#preferencia_aline_comedy"/>
+  <tem_preferencia rdf:resource="#preferencia_aline_crime"/>
+  <tem_preferencia rdf:resource="#preferencia_aline_mystery"/>
   <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aline</nome>
 </owl:NamedIndividual>
 
@@ -14161,11 +14163,32 @@
   <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</genero_preferido>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#preferencia_aline_crime">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crime</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_aline_mystery">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mystery</genero_preferido>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#usuario_leonardo">
   <rdf:type rdf:resource="#Usuario"/>
-  <tem_preferencia rdf:resource="#preferencia_leonardo_comedy"/>
+  <tem_preferencia rdf:resource="#preferencia_leonardo_action"/>
   <tem_preferencia rdf:resource="#preferencia_leonardo_adventure"/>
-  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leonardo</nome>
+  <tem_preferencia rdf:resource="#preferencia_leonardo_comedy"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonardo </nome>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_leonardo_action">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_leonardo_adventure">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</genero_preferido>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#preferencia_leonardo_comedy">
@@ -14173,9 +14196,51 @@
   <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</genero_preferido>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#preferencia_leonardo_adventure">
+<owl:NamedIndividual rdf:about="#preferencia_aline_adventure">
   <rdf:type rdf:resource="#Preferencia"/>
   <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_aline_animation">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animation</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_aline_drama">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_aline_romance">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romance</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#usuario_perez">
+  <rdf:type rdf:resource="#Usuario"/>
+  <tem_preferencia rdf:resource="#preferencia_perez_comedy"/>
+  <tem_preferencia rdf:resource="#preferencia_perez_crime"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perez</nome>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_perez_drama">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_perez_adventure">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_perez_comedy">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_perez_crime">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crime</genero_preferido>
 </owl:NamedIndividual>
 
 
