@@ -14223,6 +14223,16 @@
   <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perez</nome>
 </owl:NamedIndividual>
 
+<owl:NamedIndividual rdf:about="#preferencia_perez_comedy">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#preferencia_perez_crime">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crime</genero_preferido>
+</owl:NamedIndividual>
+
 <owl:NamedIndividual rdf:about="#preferencia_perez_drama">
   <rdf:type rdf:resource="#Preferencia"/>
   <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drama</genero_preferido>
@@ -14233,14 +14243,15 @@
   <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</genero_preferido>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#preferencia_perez_comedy">
-  <rdf:type rdf:resource="#Preferencia"/>
-  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy</genero_preferido>
+<owl:NamedIndividual rdf:about="#usuario_atv1">
+  <rdf:type rdf:resource="#Usuario"/>
+  <tem_preferencia rdf:resource="#preferencia_atv1_adventure"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atv1</nome>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#preferencia_perez_crime">
+<owl:NamedIndividual rdf:about="#preferencia_atv1_adventure">
   <rdf:type rdf:resource="#Preferencia"/>
-  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crime</genero_preferido>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adventure</genero_preferido>
 </owl:NamedIndividual>
 
 
