@@ -151,6 +151,11 @@ with onto:
 
     atua_em.inverse_property = tem_ator
 
+    # Relação específica para ator principal
+    class ator_principal(ObjectProperty, FunctionalProperty):
+        domain = [Titulo]
+        range = [Ator]
+
 ################################################################################
 
 with onto:
@@ -173,11 +178,60 @@ with onto:
 
 ################################################################################
 
-# Salvando a ontologia
-onto.save(file="./ontology/amazing_videos_p03.rdf", format="rdfxml")
-onto.save(file="./ontology/amazing_videos_p03.ttl", format="turtle")
+with onto:
+    # Instâncias de exemplo
 
-print("Ontologia criada e salva com sucesso - p03.")
+    # Criando um ator
+    ator1 = Ator("ator_keanu")
+    ator1.nome = "Keanu Reeves"
+
+    # Criando um diretor
+    diretor1 = Diretor("diretor_wachowski")
+    diretor1.nome = "Lana Wachowski"
+
+    # Criando um título
+    t1 = Titulo("titulo_matrix")
+    t1.titulo = "Matrix"
+    t1.ano = 1999
+    t1.ator_principal = ator1
+    t1.tem_ator.append(ator1)
+    t1.tem_diretor.append(diretor1)
+
+    # Criando um gênero
+    g1 = Genero("genero_scifi")
+    g1.nome_genero = "Sci-Fi"
+    t1.tem_genero.append(g1)
+
+    # Criando um usuário e uma avaliação
+    u1 = Usuario("usuario_joana")
+    u1.nome = "Joana Silva"
+    u1.nome_usuario = "joana_s"
+    u1.ano_nascimento = 1992
+
+    a1 = Avaliacao("avaliacao_joana_matrix")
+    a1.avaliador = u1
+    a1.filme_avaliado = t1
+    a1.nota_usuario = 9.0
+    a1.nome_avaliador = "Joana"
+    t1.tem_avaliacao.append(a1)
+
+with onto:
+    class prefere_ator(ObjectProperty):
+        domain = [Usuario]
+        range = [Ator]
+
+    class prefere_diretor(ObjectProperty):
+        domain = [Usuario]
+        range = [Diretor]
+
+
+################################################################################
+
+# Salvando a ontologia
+onto.save(file="./ontology/amazing_videos_p04.rdf", format="rdfxml")
+onto.save(file="./ontology/amazing_videos_p04.ttl", format="turtle")
+
+print("Ontologia criada e salva com sucesso - p04.")
 
 ################################################################################
 
