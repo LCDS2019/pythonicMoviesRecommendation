@@ -6194,12 +6194,5 @@
   <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</genero_preferido>
 </owl:NamedIndividual>
 
-<owl:NamedIndividual rdf:about="#usuario_leo">
-  <rdf:type rdf:resource="#Usuario"/>
-  <tem_preferencia rdf:resource="#pref_usuario_leo_Adventure"/>
-  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leo</nome>
-  <nome_usuario rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usuario_leo</nome_usuario>
-</owl:NamedIndividual>
-
 
 </rdf:RDF>
