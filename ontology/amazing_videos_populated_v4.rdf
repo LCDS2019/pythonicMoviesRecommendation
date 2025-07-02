@@ -343,6 +343,7 @@
   <tem_genero rdf:resource="#genero_comedy"/>
   <tem_genero rdf:resource="#genero_romance"/>
   <tem_diretor rdf:resource="#diretor_nm0721526"/>
+  <tem_avaliacao rdf:resource="#avaliacao_usuario_orlando_p_tt0000003"/>
   <titulo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poor Pierrot</titulo>
   <ano rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1892</ano>
   <nota_media rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</nota_media>
@@ -357,6 +358,13 @@
 <owl:NamedIndividual rdf:about="#genero_romance">
   <rdf:type rdf:resource="#Genero"/>
   <nome_genero rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romance</nome_genero>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#avaliacao_usuario_orlando_p_tt0000003">
+  <rdf:type rdf:resource="#Avaliacao"/>
+  <avaliador rdf:resource="#usuario_orlando"/>
+  <filme_avaliado rdf:resource="#p_tt0000003"/>
+  <nota_usuario rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</nota_usuario>
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#u_tt0000004">
@@ -6190,6 +6198,25 @@
 </owl:NamedIndividual>
 
 <owl:NamedIndividual rdf:about="#pref_usuario_perez_Action">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#usuario_orlando">
+  <rdf:type rdf:resource="#Usuario"/>
+  <prefere_ator rdf:resource="#ator_keanu"/>
+  <prefere_diretor rdf:resource="#diretor_nm0807236"/>
+  <tem_preferencia rdf:resource="#pref_usuario_orlando_Animation"/>
+  <nome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orlando</nome>
+  <nome_usuario rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usuario_orlando</nome_usuario>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pref_usuario_orlando_Animation">
+  <rdf:type rdf:resource="#Preferencia"/>
+  <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animation</genero_preferido>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pref_usuario_orlando_Action">
   <rdf:type rdf:resource="#Preferencia"/>
   <genero_preferido rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Action</genero_preferido>
 </owl:NamedIndividual>
